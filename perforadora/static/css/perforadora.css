@@ -1,0 +1,11 @@
+button {
+	margin: 0;
+}
+
+#nav .breadcrumbs a {
+	cursor: pointer;
+}
+
+.panel-generar-planilla p{
+	font-weight: bold;
+}

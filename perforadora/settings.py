@@ -26,7 +26,6 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -40,6 +39,11 @@ INSTALLED_APPS = (
     'app_planillas'
 )
 
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+# )
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,7 +56,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'perforadora.urls'
 
 WSGI_APPLICATION = 'perforadora.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
@@ -86,9 +89,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
 # Templates
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
+    os.path.abspath( os.path.join( BASE_DIR, os.pardir, 'app_planillas/templates' ) ),
 )

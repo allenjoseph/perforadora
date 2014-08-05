@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Perforadora Sta Rosa S.A.C.</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/foundation.min.css" %}" />
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/perforadora.css" %}" />
+	{% load staticfiles %}
+	<script type="text/javascript" scr="{% static "js/foundation.min.js" %}"></script>
+	{% load staticfiles %}
+	<script type="text/javascript" scr="{% static "js/vendor/jquery.js" %}"></script>
 </head>
 <body>
-	<h1>Perforadora Sta Rosa S.A.C.</h1>
+	<div id="header" class="row">
+		<div class="large-12 columns">
+			<h1>Perforadora Santa Rosa</h1>
+		</div>
+	</div>
+	<div id="nav" class="row">
+		<div class="large-8 columns">
+			<ul class="breadcrumbs">
+			  	<li {% if page != 'home' %} class="unavailable" {% endif %} >
+			  		<a href="/">Home</a>
+		  		</li>
+			  	<li {% if page != 'dia' %} class="unavailable" {% endif %} >
+			  		<a href="dia">Día</a>
+		  		</li>
+			  	<li {% if page != 'trabajador' %} class="unavailable" {% endif %} >
+			  		<a href="trabajador">Trabajador</a>
+		  		</li>
+			  	<li {% if page != 'prestamo' %} class="unavailable" {% endif %} >
+			  		<a href="prestamo">Prestamo</a>
+		  		</li>
+			  	<li {% if page != 'reporte' %} class="unavailable" {% endif %} >
+			  		<a href="reporte">Reporte</a>
+		  		</li>
+			  	<li {% if page != 'planilla' %} class="unavailable" {% endif %} >
+			  		<a href="planilla">Planilla</a>
+		  		</li>
+			</ul>
+			<div id="main">
+				{% block main %}
+				{% endblock %}
+			</div>
+		</div>
+  		<div class="large-3 columns">
+  			<div class="panel">
+			  <ul class="side-nav">
+				  <li><a href="#">Link 1</a></li>
+				  <li><a href="#">Link 2</a></li>
+				  <li><a href="#">Link 3</a></li>
+				  <li><a href="#">Link 4</a></li>
+				</ul>
+			</div>
+  		</div>
+	</div>
+	<div id="footer" class="row"></div>
 </body>
 </html>
