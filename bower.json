@@ -1,0 +1,12 @@
+{
+  "name": "Perforadora",
+  "version": "0.0.1",
+  "description": "Perforadora Sta. Rosa App",
+  "author": "Allen Joseph",
+  "dependencies": {
+    "angular": "~1.2.22",
+    "foundation": "~5.3.3",
+    "angular-route": "~1.2.22",
+    "angular-resource": "~1.2.22"
+  }
+}

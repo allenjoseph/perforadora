@@ -1,46 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head ng-app="perforadora">
 	<meta charset="UTF-8">
 	<title>Perforadora Sta Rosa S.A.C.</title>
 	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static "css/vendor/foundation.min.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/foundation/foundation.css" %}" />
 	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static "css/app/perforadora.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "app/css/perforadora.css" %}" />
 	{% load staticfiles %}
-	<script type="text/javascript" scr="{% static "js/vendor/foundation.min.js" %}"></script>
+	<script type="text/javascript" scr="{% static "vendor/foundation/foundation.js" %}"></script>
 	{% load staticfiles %}
-	<script type="text/javascript" scr="{% static "js/vendor/jquery.min.js" %}"></script>
+	<script type="text/javascript" scr="{% static "vendor/jquery/jquery.js" %}"></script>
 	{% load staticfiles %}
-	<script type="text/javascript" scr="{% static "js/vendor/angular.min.js" %}"></script>
+	<script type="text/javascript" scr="{% static "vendor/angular/angular.js" %}"></script>
+	{% load staticfiles %}
+	<script type="text/javascript" scr="{% static "app/js/perforadora.js" %}"></script>
 </head>
-<body>
+<body ng-controller="perforadoraApp">
 	<div id="header" class="row">
 		<div class="large-12 columns">
 			<h1>Perforadora Santa Rosa</h1>
 		</div>
 	</div>
-	<div id="nav" class="row">
+	<div id="nav" class="row" ng-controller="mainCtrl">
 		<div class="large-8 columns">
 			<ul class="breadcrumbs">
-			  	<li {% if page != 'home' %} class="unavailable" {% endif %} >
-			  		<a href="/">Home</a>
-		  		</li>
-			  	<li {% if page != 'dia' %} class="unavailable" {% endif %} >
-			  		<a href="dia">Día</a>
-		  		</li>
-			  	<li {% if page != 'trabajador' %} class="unavailable" {% endif %} >
-			  		<a href="trabajador">Trabajador</a>
-		  		</li>
-			  	<li {% if page != 'prestamo' %} class="unavailable" {% endif %} >
-			  		<a href="prestamo">Prestamo</a>
-		  		</li>
-			  	<li {% if page != 'reporte' %} class="unavailable" {% endif %} >
-			  		<a href="reporte">Reporte</a>
-		  		</li>
-			  	<li {% if page != 'planilla' %} class="unavailable" {% endif %} >
-			  		<a href="planilla">Planilla</a>
-		  		</li>
+				<li ng-repeat="modulo in modulos" class="{{ modulo.activo }}">
+					<a href="{{ modulo.ruta }}">{{ modulo.nombre }}</a>
+				</li>
 			</ul>
 			<div id="main">
 				{% block main %}
