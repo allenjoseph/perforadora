@@ -1,15 +1,23 @@
 (function(){
+
     'use strict';
 
-    var perforadoraApp = angular.module('perforadoraApp',[]);
+    var app = angular.module('app',['ngRoute', 'appControllers', 'appServices']);
 
-    perforadoraApp.controller('mainCtrl', function($scope){
-    	$scope.modulos = [{ruta : '/' , nombre : 'Home'},
-    	{ruta : 'trabajador' , nombre : 'Trabajador'},
-    	{ruta : 'prestamo' , nombre : 'Prestamo'},
-    	{ruta : 'dia' , nombre : 'Dia'},
-    	{ruta : 'semama' , nombre : 'Semana'},
-    	{ruta : 'planilla' , nombre : 'Planilla'}];
-    });
+    app.config(['$routeProvider',
+        function($routeProvider){
+            $routeProvider
+            .when('/home',{
+                templateUrl : 'static/partials/main.tpl.html',
+                controller : 'MainCtrl'
+            })
+            .when('/planilla',{
+                templateUrl : 'static/partials/planilla.tpl.html',
+                controller : 'PlanillaListCtrl'
+            })
+            .otherwise({
+                redirectTo : '/home'
+            });
+    }]);
+
 })();
-

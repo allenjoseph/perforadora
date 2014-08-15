@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head ng-app="perforadora">
+<head>
 	<meta charset="UTF-8">
 	<title>Perforadora Sta Rosa S.A.C.</title>
 	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="{% static "vendor/foundation/foundation.css" %}" />
 	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="{% static "app/css/perforadora.css" %}" />
-	{% load staticfiles %}
-	<script type="text/javascript" scr="{% static "vendor/foundation/foundation.js" %}"></script>
-	{% load staticfiles %}
-	<script type="text/javascript" scr="{% static "vendor/jquery/jquery.js" %}"></script>
-	{% load staticfiles %}
-	<script type="text/javascript" scr="{% static "vendor/angular/angular.js" %}"></script>
-	{% load staticfiles %}
-	<script type="text/javascript" scr="{% static "app/js/perforadora.js" %}"></script>
 </head>
-<body ng-controller="perforadoraApp">
+<body ng-app="app">
 	<div id="header" class="row">
 		<div class="large-12 columns">
 			<h1>Perforadora Santa Rosa</h1>
 		</div>
 	</div>
-	<div id="nav" class="row" ng-controller="mainCtrl">
-		<div class="large-8 columns">
-			<ul class="breadcrumbs">
-				<li ng-repeat="modulo in modulos" class="{{ modulo.activo }}">
-					<a href="{{ modulo.ruta }}">{{ modulo.nombre }}</a>
-				</li>
-			</ul>
-			<div id="main">
-				{% block main %}
-				{% endblock %}
-			</div>
-		</div>
-  		<div class="large-3 columns">
-  			<div class="panel">
-			  <ul class="side-nav">
-				  <li><a href="#">Link 1</a></li>
-				  <li><a href="#">Link 2</a></li>
-				  <li><a href="#">Link 3</a></li>
-				  <li><a href="#">Link 4</a></li>
-				</ul>
-			</div>
-  		</div>
-	</div>
+    <div ng-view></div>
 	<div id="footer" class="row"></div>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static "vendor/jquery/jquery.js" %}"></script>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static "vendor/angular/angular.js" %}"></script>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static "vendor/angular-route/angular-route.js" %}"></script>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static "vendor/angular-resource/angular-resource.js" %}"></script>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static "vendor/foundation/foundation.js" %}"></script>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static "app/js/perforadora.js" %}"></script>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static "app/js/controllers.js" %}"></script>
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static "app/js/services.js" %}"></script>
 </body>
 </html>

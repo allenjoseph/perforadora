@@ -6,10 +6,10 @@ module.exports = function(grunt){
                 jshintrc : true,
                 reporter : require('jshint-stylish'),
             },
-            all : ['perforadora/static/js/app/**/*.js'],
+            all : ['perforadora/static/app/js/**/*.js'],
         },
         watch : {
-            files : ['perforadora/static/js/app/**/*.js'],
+            files : ['perforadora/static/app/js/**/*.js'],
             tasks : ['jshint'],
         },
         bower: {
