@@ -7,11 +7,16 @@
     appControllers.controller('MainCtrl',['$scope', 'MainService',
         function($scope, MainService){
             $scope.modulos = MainService.query();
-    }]);
+        }]);
 
-    appControllers.controller('PlanillaListCtrl',['$scope', 'Planilla',
-        function($scope, Planilla){
-            $scope.planilla = Planilla.query();
-    }]);
+    appControllers.controller('PlanillaListCtrl',['$scope', 'PlanillaService',
+        function($scope, PlanillaService){
+            $scope.planilla = PlanillaService.query();
+        }]);
+
+    appControllers.controller('MenuCtrl', ['$scope', 'MenuService',
+        function($scope, MenuService){
+            $scope.modulos = MenuService.query();
+        }]);
 
 })();

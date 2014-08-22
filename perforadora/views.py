@@ -8,7 +8,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
     	context = super(HomeView, self).get_context_data(**kwargs)
-    	context['page'] = 'home'
+    	context['page'] = 'Perforadora Sta Rosa S.A.C.'
     	return context
 
 #JSON Response Mixin
@@ -36,27 +36,33 @@ class JSONInitView(JSONResponseMixin, DetailView):
         modulos = [
         {
             'nombre' : 'HOME',
-            'ruta' : '#/home'
+            'ruta' : '#/home',
+            'activo' : 'true'
         },
         {
             'nombre' : 'TRABAJADOR',
-            'ruta' : '#/trabajador'
+            'ruta' : '#/trabajador',
+            'activo' : 'false'
         },
         {
             'nombre' : 'PRESTAMO',
-            'ruta' : '#/prestamo'
+            'ruta' : '#/prestamo',
+            'activo' : 'false'
         },
         {
             'nombre' : 'DIA',
-            'ruta' : '#/dia'
+            'ruta' : '#/dia',
+            'activo' : 'false'
         },
         {
             'nombre' : 'SEMANA',
-            'ruta' : '#/semana'
+            'ruta' : '#/semana',
+            'activo' : 'false'
         },
         {
             'nombre' : 'PLANILLA' ,
-            'ruta' : '#/planilla'
+            'ruta' : '#/planilla',
+            'activo' : 'false'
         } ]
 
         context = modulos

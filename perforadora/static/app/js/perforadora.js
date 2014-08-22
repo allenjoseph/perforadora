@@ -2,7 +2,7 @@
 
     'use strict';
 
-    var app = angular.module('app',['ngRoute', 'appControllers', 'appServices']);
+    var app = angular.module('PerforadoraApp',['ngRoute', 'appControllers', 'appServices','appDirectives']);
 
     app.config(['$routeProvider',
         function($routeProvider){

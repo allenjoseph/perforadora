@@ -9,13 +9,20 @@
             return $resource('modulos.json',{},{
                 query : { method : 'GET', isArray:true }
             });
-    }]);
+        }]);
 
-    appServices.factory('Planilla', ['$resource',
+    appServices.factory('MenuService',['$resource',
+        function($resource){
+            return $resource('modulos.json',{},{
+                query : { method : 'GET', isArray:true }
+            });
+        }]);
+
+    appServices.factory('PlanillaService', ['$resource',
         function($resource){
             return $resource('planilla/?format=json',{},{
                 query : { method : 'GET' }
             });
-    }]);
+        }]);
 
 })();
