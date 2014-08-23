@@ -6,6 +6,15 @@ header {
     background: #ccc;
 }
 
+nav{
+    margin-top: 20px;
+}
+
+.content-main{
+    border: 1px dashed #ddd;
+    padding: 20px;
+}
+
 #nav .breadcrumbs a {
 	cursor: pointer;
 }

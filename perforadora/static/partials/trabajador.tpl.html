@@ -1,0 +1,16 @@
+<h1>{{ modulo.titulo }}</h1>
+<div>
+    <button class="button tiny">Agregar</button>
+</div>
+<div>
+    <div>
+        <div class="table-header"></div>
+        <div class="table-body">
+            <div class="table-row" ng-repeat="trabajador in modulo.lista">
+                <span class="table-cell-number">{{ trabajador.id_trabajador }}</span>
+                <span class="table-cell-text">{{ trabajador.apellido_paterno }}</span>
+                <span class="table-cell-text">{{ trabajador.nombres }}</span>
+            </div>
+        </div>
+    </div>
+</div>

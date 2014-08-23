@@ -15,6 +15,10 @@
                 templateUrl : 'static/partials/planilla.tpl.html',
                 controller : 'PlanillaListCtrl'
             })
+            .when('/trabajador',{
+                templateUrl : 'static/partials/trabajador.tpl.html',
+                controller : 'TrabajadorListCtrl'
+            })
             .otherwise({
                 redirectTo : '/home'
             });
