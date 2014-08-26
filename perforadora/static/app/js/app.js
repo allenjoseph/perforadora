@@ -1,8 +1,9 @@
-(function(){
+'use strict';
 
-    'use strict';
 
-    var app = angular.module('PerforadoraApp',['ngRoute', 'appControllers', 'appServices','appDirectives']);
+define(['angular','ngRoute','appServices','appControllers','appDirectives'], function(){
+
+    var app = angular.module('PerforadoraApp',['ngRoute', 'appServices', 'appControllers', 'appDirectives']);
 
     app.config(['$routeProvider',
         function($routeProvider){
@@ -24,4 +25,5 @@
             });
     }]);
 
-})();
+    return app;
+});

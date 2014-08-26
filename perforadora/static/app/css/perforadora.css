@@ -25,9 +25,7 @@ nav{
 .table-content{
     display: table;
     width: inherit;
-}
-.table-header{
-    border: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
 }
 .table-header .table-cell{
     text-align: center;
@@ -35,9 +33,12 @@ nav{
     font-size: 0.7em;
     font-weight: bold;
     border-right: 1px dashed #ccc;
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+
 }
-.table-header .table-cell:last-child{
-    border-right: none;
+.table-header .table-cell:first-child{
+    border-left: 1px dashed #ccc;
 }
 .table-row {
     display: table-row;
@@ -51,9 +52,15 @@ nav{
     text-align: center;
     font-weight: bold;
 }
+.table-cell-date{
+    text-align: center;
+}
 .table-cell-text{
     text-align: left;
 }
 .table-cell-number{
     text-align: right;
+}
+.table-row.table-body:nth-child(2n+1){
+    background: #f3f3f3;
 }

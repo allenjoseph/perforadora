@@ -1,6 +1,6 @@
-(function(){
+'use strict';
 
-    'use strict';
+define(['angular'],function(){
 
     var appControllers = angular.module('appControllers',[]);
 
@@ -36,4 +36,6 @@
 
     }]);
 
-})();
+    return appControllers;
+
+});

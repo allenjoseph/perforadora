@@ -1,6 +1,6 @@
-(function(){
+'use strict';
 
-    'use strict';
+define(['angular'],function(){
 
     var appDirectives = angular.module('appDirectives',[]);
 
@@ -43,4 +43,6 @@
         }
     });
 
-})();
+    return appDirectives;
+
+});

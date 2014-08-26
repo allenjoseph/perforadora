@@ -1,6 +1,6 @@
-(function(){
+'use strict';
 
-    'use strict';
+define(['angular','ngResource'], function(){
 
     var appServices = angular.module('appServices',['ngResource']);
 
@@ -32,4 +32,5 @@
         });
     }]);
 
-})();
+    return appServices;
+});
