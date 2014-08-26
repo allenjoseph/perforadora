@@ -18,7 +18,42 @@ nav{
 #nav .breadcrumbs a {
 	cursor: pointer;
 }
-
-.panel-generar-planilla p{
-	font-weight: bold;
+/* TABLE STYLE-------------------*/
+.table-grid{
+    width: 100%;
+}
+.table-content{
+    display: table;
+    width: inherit;
+}
+.table-header{
+    border: 1px dashed #ccc;
+}
+.table-header .table-cell{
+    text-align: center;
+    color: #666;
+    font-size: 0.7em;
+    font-weight: bold;
+    border-right: 1px dashed #ccc;
+}
+.table-header .table-cell:last-child{
+    border-right: none;
+}
+.table-row {
+    display: table-row;
+}
+.table-cell{
+    display: table-cell;
+    padding: 0px 3px;
+    font-size: 0.8em;
+}
+.table-cell-id{
+    text-align: center;
+    font-weight: bold;
+}
+.table-cell-text{
+    text-align: left;
+}
+.table-cell-number{
+    text-align: right;
 }

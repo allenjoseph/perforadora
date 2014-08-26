@@ -36,4 +36,11 @@
         };
     });
 
+    appDirectives.directive('appDataTable', function(){
+        return{
+            restrict: 'E',
+            templateUrl : 'static/partials/datatable.tpl.html'
+        }
+    });
+
 })();

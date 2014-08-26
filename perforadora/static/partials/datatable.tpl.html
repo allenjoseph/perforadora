@@ -1,0 +1,13 @@
+<div class="table-grid">
+    <div class="table-content">
+        <div class="table-row table-header" >
+            <div class="table-cell" ng-repeat="colum in modulo.datatable.header">{{ colum.label }}</div>
+        </div>
+        <div class="table-row table-body" ng-repeat="trabajador in modulo.trabajadores">
+            <div class="table-cell table-cell-id">{{ trabajador.id_trabajador }}</div>
+            <div class="table-cell table-cell-text">{{ trabajador.apellido_paterno }}</div>
+            <div class="table-cell table-cell-text">{{ trabajador.nombres }}</div>
+            <div class="table-cell table-cell-date">{{ trabajador.fecha_ingreso_planilla | date:'MM/dd/yyyy' }}</div>
+        </div>
+    </div>
+</div>

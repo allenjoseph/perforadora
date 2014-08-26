@@ -24,9 +24,15 @@
         $scope.modulo =
         {
             titulo : 'Administrar Trabajador',
+            trabajadores : TrabajadorService.query()
         };
 
-        $scope.modulo.lista = TrabajadorService.query();
+        $scope.modulo.datatable = {
+            header : [  { id : 'id_trabajador', label : 'ID'},
+                        { id : 'apellido_paterno', label : 'APELLIDO'},
+                        { id : 'nombres', label : 'NOMBRE'},
+                        { id : 'fecha_ingreso_planilla', label : 'INGRESO'}]
+        }
 
     }]);
 
