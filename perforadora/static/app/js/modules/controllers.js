@@ -16,7 +16,16 @@ define(['angular'],function(){
 
     appControllers.controller('MenuCtrl', ['$scope', 'MenuService',
     function($scope, MenuService){
-        $scope.modulos = MenuService.query();
+        var ng = $scope;
+
+        ng.modulos = MenuService.query();
+
+        ng.menuActive = 'home';
+
+        ng.selectMenu = function(menu){
+
+            ng.menuActive = menu;
+        }
     }]);
 
     appControllers.controller('TrabajadorListCtrl', ['$scope', 'TrabajadorService',

@@ -36,32 +36,32 @@ class JSONInitView(JSONResponseMixin, DetailView):
         modulos = [
         {
             'nombre' : 'HOME',
-            'ruta' : '#/home',
+            'ruta' : 'home',
             'activo' : 'true'
         },
         {
             'nombre' : 'TRABAJADOR',
-            'ruta' : '#/trabajador',
+            'ruta' : 'trabajador',
             'activo' : 'false'
         },
         {
             'nombre' : 'PRESTAMO',
-            'ruta' : '#/prestamo',
+            'ruta' : 'prestamo',
             'activo' : 'false'
         },
         {
             'nombre' : 'DIA',
-            'ruta' : '#/dia',
+            'ruta' : 'dia',
             'activo' : 'false'
         },
         {
             'nombre' : 'SEMANA',
-            'ruta' : '#/semana',
+            'ruta' : 'semana',
             'activo' : 'false'
         },
         {
             'nombre' : 'PLANILLA' ,
-            'ruta' : '#/planilla',
+            'ruta' : 'planilla',
             'activo' : 'false'
         } ]
 

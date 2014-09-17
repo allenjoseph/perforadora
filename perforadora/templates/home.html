@@ -12,35 +12,44 @@
 </head>
 <body>
     <div class="container">
-        <!-- ### HEADER ######################################### -->
+        <!-- HEADER -->
     	<div id="header" class="row">
     		<header class="col-md-12" class="page-header">
     			<h1>PERFORADORA</h1>
     		</header>
     	</div>
-        <!-- ### NAV ######################################### -->
+        <!-- NAV -->
         <div id="nav" class="row" ng-controller="MenuCtrl">
             <nav class="col-md-12">
                 <app-menu></app-menu>
             </nav>
         </div>
-        <!-- ### NAV ######################################### -->
+        <!-- NAV -->
         <div id="content" class="row">
             <section class="col-md-12">
-                <div class="col-md-9 content-main">
+                <div class="col-md-9">
                     <div ng-view></div>
                 </div>
                 <div class="col-md-3">
-                    <div class="panel">
-                      <ul class="side-nav">
-                          <li><a href="#">Link 1</a></li>
-                          <li><a href="#">Link 2</a></li>
-                        </ul>
-                    </div>
+                    <h2>Pendientes</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="badge">14</span>
+                            Cras justo odio
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">2</span>
+                            Dapibus ac facilisis in
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">1</span>
+                            Morbi leo risus
+                        </li>
+                    </ul>
                 </div>
             </section>
         </div>
-        <!-- ### FOOTER ######################################### -->
+        <!-- FOOTER -->
     	<div id="footer" class="row">
             <footer></footer>
         </div>
