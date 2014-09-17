@@ -1,6 +1,3 @@
-<ul class="breadcrumbs">
-    <li ng-repeat="modulo in modulos" app-menu-option>
-        <a href="{{ modulo.ruta }}">{{ modulo.nombre }}</a>
-    </li>
-</ul>
-
+<div class="btn-group btn-group-justified">
+    <a ng-repeat="modulo in modulos" href="{{ modulo.ruta }}" class="btn btn-default">{{ modulo.nombre }}</a>
+</div>

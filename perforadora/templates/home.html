@@ -2,46 +2,49 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{{ page }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page }}</title>
 	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static "vendor/foundation/foundation.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "app/css/bootstrap.min.css" %}" />
+	<!-- <link rel="stylesheet" type="text/css" href="{% static "vendor/foundation/foundation.css" %}" /> -->
 	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="{% static "app/css/perforadora.css" %}" />
 </head>
 <body>
-    <!-- ### HEADER ######################################### -->
-	<div id="header">
-		<header class="large-12 columns">
-			<h1></h1>
-		</header>
-	</div>
-    <!-- ### NAV ######################################### -->
-    <div id="nav" class="row" ng-controller="MenuCtrl">
-        <nav class="large-12 columns">
-            <app-menu></app-menu>
-        </nav>
-    </div>
-    <!-- ### NAV ######################################### -->
-    <div id="content" class="row">
-        <section class="large-12 columns">
-            <div class="large-9 columns content-main">
-                <div ng-view></div>
-            </div>
-            <div class="large-3 columns">
-                <div class="panel">
-                  <ul class="side-nav">
-                      <li><a href="#">Link 1</a></li>
-                      <li><a href="#">Link 2</a></li>
-                    </ul>
+    <div class="container">
+        <!-- ### HEADER ######################################### -->
+    	<div id="header" class="row">
+    		<header class="col-md-12" class="page-header">
+    			<h1>PERFORADORA</h1>
+    		</header>
+    	</div>
+        <!-- ### NAV ######################################### -->
+        <div id="nav" class="row" ng-controller="MenuCtrl">
+            <nav class="col-md-12">
+                <app-menu></app-menu>
+            </nav>
+        </div>
+        <!-- ### NAV ######################################### -->
+        <div id="content" class="row">
+            <section class="col-md-12">
+                <div class="col-md-9 content-main">
+                    <div ng-view></div>
                 </div>
-            </div>
-        </section>
+                <div class="col-md-3">
+                    <div class="panel">
+                      <ul class="side-nav">
+                          <li><a href="#">Link 1</a></li>
+                          <li><a href="#">Link 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- ### FOOTER ######################################### -->
+    	<div id="footer" class="row">
+            <footer></footer>
+        </div>
     </div>
-    <!-- ### FOOTER ######################################### -->
-	<div id="footer" class="row">
-        <footer></footer>
-    </div>
-
     {% load staticfiles %}
     <script data-main="{% static "app/js/main.js" %}" src="{% static "vendor/requirejs/require.js" %}"></script>
 </body>
