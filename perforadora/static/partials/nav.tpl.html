@@ -1,3 +1,7 @@
-<div class="btn-group btn-group-justified">
-    <a ng-repeat="modulo in modulos" ng-click="selectMenu(modulo.ruta)" href="#/{{ modulo.ruta }}" class="btn btn-default" ng-class="{ 'btn-warning':menuActive === modulo.ruta}">{{ modulo.nombre }}</a>
+<div class="row">
+    <nav class="col-md-12">
+        <div class="btn-group btn-group-justified">
+            <a ng-repeat="modulo in modulos" ng-click="selectMenu(modulo.ruta)" href="#/{{ modulo.ruta }}" class="btn btn-default" ng-class="{ 'btn-warning':menuActive === modulo.ruta}">{{ modulo.nombre }}</a>
+        </div>
+    </nav>
 </div>
