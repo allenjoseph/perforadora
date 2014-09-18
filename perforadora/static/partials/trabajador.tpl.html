@@ -1,6 +1,98 @@
 <h2>{{ modulo.titulo }}</h2>
 <div>
     <button class="btn btn-primary btn-sm">Agregar</button>
+    <div class="well">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Agregar un trabajador</legend>
+                <div class="form-group">
+                    <label for="inputNombres" class="col-lg-2 control-label">Nombres</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputNombres" placeholder="Nombres">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputApellidoPaterno" class="col-lg-2 control-label">Apellido paterno</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" id="inputApellidoPaterno" placeholder="ApellidoPaterno">
+                    </div>
+                    <label for="inputApellidoMaterno" class="col-lg-2 control-label">Apellido materno</label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" id="inputApellidoMaterno" placeholder="ApellidoMaterno">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="selectOcupacion" class="col-lg-2 control-label">Ocupacion</label>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="selectOcupacion">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </select>
+                    </div>
+                    <label for="selectCategoria" class="col-lg-2 control-label">Categoria</label>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="selectCategoria">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSeguro" class="col-lg-2 control-label">Seguro de salud</label>
+                    <div class="col-lg-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="inputSeguro" checked=""> ESSALUD
+                            </label>
+                        </div>
+                    </div>
+                    <label class="col-lg-2 control-label">Seguro de pension</label>
+                    <div class="col-lg-4">
+                        <div class="radio col-lg-6">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="2" checked="">
+                                ONP
+                            </label>
+                        </div>
+                        <div class="radio col-lg-6">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="3">
+                                AFP
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAsignacionFamiliar" class="col-lg-2 control-label">Asignacion familiar</label>
+                    <div class="col-lg-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="inputAsignacionFamiliar"> Es padre de familia.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputFechaIngreso" class="col-lg-2 control-label">Fecha de ingreso</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputFechaIngreso" placeholder="Fecha de ingreso a planilla">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
 </div>
 <div>
     <h4>Lista de trabajadores</h4>
