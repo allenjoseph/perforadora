@@ -12,10 +12,13 @@ define(['angular'],function(){
         };
     });
 
-    appDirectives.directive('appDataTable', function(){
+    appDirectives.directive('appTable', function(){
         return{
-            restrict: 'E',
-            templateUrl : 'static/partials/datatable.tpl.html'
+            restrict : 'E',
+            templateUrl : 'static/partials/table.tpl.html',
+            scope : {
+                data : '='
+            }
         }
     });
 
