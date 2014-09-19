@@ -63,11 +63,12 @@ WSGI_APPLICATION = 'perforadora.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'perforadora',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST' : ''
+        'USER': 'root',
+        'PASSWORD': 'allen',
+        'HOST' : 'localhost',
+        'PORT': '3306'
     }
 }
 
