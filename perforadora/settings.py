@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'perforadora',
     'rest_framework',
-    'app_planillas'
+    'app_planillas',
 )
 
 # STATICFILES_FINDERS = (
@@ -88,8 +88,16 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+#STATIC_ROOT = os.sep.join(os.path.abspath(__file__).split(os.sep)[:7]+['static'])
+
+#STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
+#STATICFILES_STORAGE = 'require.storage.OptimizedCachedStaticFilesStorage'
 
 STATIC_URL = '/static/'
+
+#RequireJS
+#REQUIRE_BASE_URL = "app/js"
+
 
 # Templates
 

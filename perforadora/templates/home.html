@@ -1,13 +1,11 @@
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page }}</title>
-	{% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static "app/css/bootstrap.min.css" %}" />
-	<!-- <link rel="stylesheet" type="text/css" href="{% static "vendor/foundation/foundation.css" %}" /> -->
-	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="{% static "app/css/perforadora.css" %}" />
 </head>
 <body>
@@ -34,7 +32,6 @@
             <footer></footer>
         </div>
     </div>
-    {% load staticfiles %}
     <script data-main="{% static "app/js/main.js" %}" src="{% static "vendor/requirejs/require.js" %}"></script>
 </body>
 </html>

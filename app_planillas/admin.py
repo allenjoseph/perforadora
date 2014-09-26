@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from models import Ocupacion
+from models import Ocupacion, Categoria, Tasa, Seguro, Prestamo, Letra, Trabajador, Dia, ReporteSemanal, Parametro
+
 class OcupacionAdmin(admin.ModelAdmin):
 	list_display = (
 		'id_ocupacion',
@@ -8,7 +9,6 @@ class OcupacionAdmin(admin.ModelAdmin):
 	)
 admin.site.register(Ocupacion, OcupacionAdmin)
 
-from models import Categoria
 class CategoriaAdmin(admin.ModelAdmin):
 	list_display = (
 		'idategoria',
@@ -17,7 +17,6 @@ class CategoriaAdmin(admin.ModelAdmin):
 	)
 admin.site.register(Categoria, CategoriaAdmin)
 
-from models import Tasa
 class TasaAdmin(admin.ModelAdmin):
 	list_display = (
 		'id_tasa',
@@ -26,7 +25,6 @@ class TasaAdmin(admin.ModelAdmin):
 	)
 admin.site.register(Tasa, TasaAdmin)
 
-from models import Seguro
 class SeguroAdmin(admin.ModelAdmin):
 	list_display = (
 		'id_seguro',
@@ -35,7 +33,6 @@ class SeguroAdmin(admin.ModelAdmin):
 	)
 admin.site.register(Seguro, SeguroAdmin)
 
-from models import Prestamo
 class PrestamoAdmin(admin.ModelAdmin):
 	list_display = (
 		'id_prestamo',
@@ -45,7 +42,6 @@ class PrestamoAdmin(admin.ModelAdmin):
 	)
 admin.site.register(Prestamo, PrestamoAdmin)
 
-from models import Letra
 class LetraAdmin(admin.ModelAdmin):
 	list_display = (
 		'id_letra',
@@ -54,7 +50,6 @@ class LetraAdmin(admin.ModelAdmin):
 	)
 admin.site.register(Letra, LetraAdmin)
 
-from models import Trabajador
 class TrabajadorAdmin(admin.ModelAdmin):
     list_display = (
     	'id_trabajador',
@@ -68,10 +63,11 @@ class TrabajadorAdmin(admin.ModelAdmin):
 		'ocupacion',
 		'id_seguro_pension',
 		'id_seguro_salud'
-	)
+	   )
+    list_filter = ('categoria','ocupacion')
+    search_fields = ('nombres','apellido_paterno','apellido_materno')
 admin.site.register(Trabajador, TrabajadorAdmin)
 
-from models import Dia
 class DiaAdmin(admin.ModelAdmin):
     list_display = (
     	'id_dia',
@@ -88,7 +84,6 @@ class DiaAdmin(admin.ModelAdmin):
 	)
 admin.site.register(Dia, DiaAdmin)
 
-from models import ReporteSemanal
 class ReporteSemanalAdmin(admin.ModelAdmin):
     list_display = (
     	'id_reporte_semanal',
@@ -116,10 +111,9 @@ class ReporteSemanalAdmin(admin.ModelAdmin):
 	)
 admin.site.register(ReporteSemanal,ReporteSemanalAdmin)
 
-from models import Parametro
 class ParametroAdmin(admin.ModelAdmin):
     list_display = (
-    	'id_parametro', 
+    	'id_parametro',
     	'nombre',
     	'abreviatura'
 	)

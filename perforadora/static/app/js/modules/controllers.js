@@ -44,25 +44,10 @@ define(['angular'],function(){
             trabajadores :
             {
                 header :
-                [{
-                    id : 'id_trabajador',
-                    label : 'ID'
-                },
-                {
-                    id : 'apellido_paterno',
-                    label : 'APELLIDO'
-                },
-                {
-                    id : 'nombres',
-                    label : 'NOMBRE'
-                },
-                {
-                    id : 'fecha_ingreso_planilla',
-                    label : 'INGRESO',
-                    format : {
-                        date : 'dd/MM/yyyy'
-                    }
-                }],
+                [{id : 'id_trabajador',label : 'ID'},
+                {id : 'apellido_paterno',label : 'APELLIDO'},
+                {id : 'nombres',label : 'NOMBRE'},
+                {id : 'fecha_ingreso_planilla',label : 'INGRESO',format : {date : 'dd/MM/yyyy'}}],
                 content : TrabajadorService.query()
             }
         };
