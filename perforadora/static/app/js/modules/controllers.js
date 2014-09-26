@@ -35,8 +35,14 @@ define(['angular'],function(){
         };
     }]);
 
-    appControllers.controller('TrabajadorListCtrl', ['$scope', 'TrabajadorService', function($scope, TrabajadorService){
+    appControllers.controller('TrabajadorListCtrl', ['$scope', 'TrabajadorService','OcupacionService','CategoriaService', function($scope, TrabajadorService, OcupacionService, CategoriaService){
         var ng = $scope;
+
+        ng.ocupacion = {};
+        ng.categoria = {};
+
+        ng.ocupaciones = OcupacionService.query();
+        ng.categorias = CategoriaService.query();
 
         ng.modulo =
         {

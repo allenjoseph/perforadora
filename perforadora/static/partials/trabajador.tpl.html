@@ -24,22 +24,14 @@
                 <div class="form-group">
                     <label for="selectOcupacion" class="col-lg-2 control-label">Ocupacion</label>
                     <div class="col-lg-4">
-                        <select class="form-control" id="selectOcupacion">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <select class="form-control" id="selectOcupacion" ng-model="ocupacion" ng-options="ocupacion.nombre for ocupacion in ocupaciones">
+                            <option value="">-- seleccione --</option>
                         </select>
                     </div>
                     <label for="selectCategoria" class="col-lg-2 control-label">Categoria</label>
                     <div class="col-lg-4">
-                        <select class="form-control" id="selectCategoria">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <select class="form-control" id="selectCategoria" ng-model="categoria" ng-options="categoria.nombre for categoria in categorias">
+                            <option value="">-- seleccione --</option>
                         </select>
                     </div>
                 </div>

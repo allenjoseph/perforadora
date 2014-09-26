@@ -28,5 +28,16 @@ define(['angular','ngResource'], function(){
         });
     }]);
 
+    appServices.factory('OcupacionService', ['$resource',function($resource){
+        return $resource('app/ocupacion/?format=json',{},{
+            query : { method : 'GET', isArray:true }
+        });
+    }]);
+
+    appServices.factory('CategoriaService', ['$resource',function($resource){
+        return $resource('app/categoria/?format=json',{},{
+            query : { method : 'GET', isArray:true }
+        });
+    }]);
     return appServices;
 });
